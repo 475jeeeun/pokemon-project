@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux'
 import { Card } from '../component/Card';
 
 function Main() {
-    const pokemonData = useSelector (state =>state.pokemon.data)
+    const pokemonData = useSelector(state =>state.pokemon.data)
   return (
     <>
       {pokemonData.map(el =><Card key={el.id} pokemon={el}

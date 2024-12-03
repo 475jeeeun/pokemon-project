@@ -17,8 +17,8 @@ const pokemonData = {
 id: pokemonId,
 name: data.names.find (el =>el.language.name ==='ko').name,
 description: data.flavor_text_entries.find (el =>el.language.name ==='ko').flavor_text,
-back : `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemonId}.png`,
-front :`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemonId}.png`
+front :`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/${pokemonId}.png`,
+back :`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/${pokemonId}.png`
 }
 return pokemonData
   }

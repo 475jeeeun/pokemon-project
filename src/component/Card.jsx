@@ -1,8 +1,10 @@
 import { useNavigate } from "react-router-dom"
 import styled from "styled-components"
+import FavoriteButton from "./FavoriteButton"
 
 const CardContainer = styled.section `
     width: 150px;
+    background-color: aliceblue;
     border: 1px solid gray;
     display: flex;
     flex-direction: column;
@@ -19,7 +21,10 @@ export const Card = ({pokemon}) =>{
     return(
         <CardContainer onClick={() => navigate(`/detail/${pokemon.id}`)}>
         <img src={pokemon.front} />
-        <div>{pokemon.name}</div>
+        <div>
+            {pokemon.name}
+            <FavoriteButton pokemonId={pokemon.id} />
+        </div>
         </CardContainer>
 
     )
